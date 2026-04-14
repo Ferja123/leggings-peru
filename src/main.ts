@@ -8,6 +8,7 @@ import cliente2 from './assets/clientes/cliente2.png'
 import cliente3 from './assets/clientes/cliente3.png'
 import cliente4 from './assets/clientes/cliente4.png'
 import cliente5 from './assets/clientes/cliente5.png'
+import cliente6 from './assets/clientes/cliente6.png'
 
 // ═══ DATA ═══
 const WHATSAPP_NUMBER = '51900000000'
@@ -68,7 +69,7 @@ const reviews = [
     initials: 'CV',
     location: 'Puno, Perú',
     text: 'Aquí en Puno el frío es intenso y estos leggings me mantienen abrigada todo el día. El material es grueso pero no incómodo. Los uso debajo del pantalón también.',
-    photo: null,
+    photo: cliente6,
     date: 'Febrero 2026',
     verified: true,
     rating: 5
