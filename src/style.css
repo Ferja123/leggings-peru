@@ -475,9 +475,29 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
 .reviews-count { font-size: 0.85rem; color: var(--text-secondary); }
 
 .reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  overflow-x: auto;
   gap: 20px;
+  padding-bottom: 32px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 24px;
+}
+
+.reviews-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.reviews-grid::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 10px;
+}
+.reviews-grid::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.reviews-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
 }
 
 .review-card {
@@ -486,6 +506,10 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   border-radius: var(--radius-lg);
   padding: 28px;
   transition: var(--transition);
+  min-width: 320px;
+  max-width: 380px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
 .review-card:hover {
@@ -876,8 +900,6 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   .benefits-grid { grid-template-columns: 1fr; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .reviews-grid { grid-template-columns: 1fr; }
 
   .form-row { grid-template-columns: 1fr; }
 
