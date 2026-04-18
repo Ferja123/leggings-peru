@@ -202,8 +202,8 @@ function renderApp() {
         </div>
 
         <div class="hero-visual fade-up-3d" style="animation-delay: 0.2s">
-          <div class="hero-img-wrapper hero-3d-float" style="overflow: hidden; border-radius: 20px;">
-            <video src="/video-demo-1.mp4" autoplay loop muted playsinline preload="auto" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;"></video>
+          <div class="hero-img-wrapper hero-3d-float" style="overflow: hidden; border-radius: 20px; background-color: #222; position: relative;">
+            <video class="lazy-video" data-src="/video-demo-1.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; opacity: 0; transition: opacity 0.5s ease-in-out;"></video>
             <div class="hero-float-badge">
               <span class="hfb-icon">🔥</span>
               <div>
@@ -294,8 +294,8 @@ function renderApp() {
     <section class="section fade-up-3d" style="padding-top: 20px; padding-bottom: 20px;">
       <div class="section-label">MÍRALO EN ACCIÓN</div>
       <h2 class="section-title">Así se ve y se siente en la vida real</h2>
-      <div style="max-width: 480px; margin: 24px auto 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.06);">
-        <video src="/video-demo-2.mp4" autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 18px;"></video>
+      <div style="max-width: 480px; margin: 24px auto 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.06); background-color: #222;">
+        <video class="lazy-video" data-src="/video-demo-2.mp4" autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 18px; opacity: 0; transition: opacity 0.5s ease-in-out;"></video>
       </div>
     </section>
 
@@ -705,6 +705,41 @@ function setupPackageSelector() {
   })
 }
 
+// ═══ LAZY VIDEOS ═══
+function setupLazyVideos() {
+  const lazyVideos = document.querySelectorAll('.lazy-video');
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const video = entry.target as HTMLVideoElement;
+          const src = video.getAttribute('data-src');
+          if (src) {
+            video.src = src;
+            video.load();
+            video.onloadeddata = () => {
+               video.style.opacity = '1';
+               video.play().catch(e => console.log('Autoplay prevented:', e));
+            };
+            observer.unobserve(video);
+          }
+        }
+      });
+    }, { rootMargin: '0px 0px 200px 0px' });
+
+    lazyVideos.forEach(video => {
+      videoObserver.observe(video);
+    });
+  } else {
+    // Fallback
+    lazyVideos.forEach((video) => {
+      const v = video as HTMLVideoElement;
+      v.src = v.getAttribute('data-src') || '';
+      v.style.opacity = '1';
+    });
+  }
+}
+
 // ═══ FAQ ACCORDION ═══
 function setupFAQ() {
   document.querySelectorAll('.faq-item').forEach(item => {
@@ -720,4 +755,7 @@ function setupFAQ() {
 }
 
 // ═══ INIT ═══
-document.addEventListener('DOMContentLoaded', renderApp)
+document.addEventListener('DOMContentLoaded', () => {
+  renderApp();
+  setupLazyVideos();
+});
