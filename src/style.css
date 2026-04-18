@@ -1395,7 +1395,8 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   .stock-indicator { display: flex; flex-direction: column; align-items: center; }
   .stock-bar { max-width: 260px; }
   .hero-visual { order: -1; }
-  .hero-img-wrapper { max-width: 300px; }
+  .hero-img-wrapper { max-width: 100%; width: 100%; }
+  .hero-img-wrapper video { border-radius: 16px !important; }
   .hero-float-badge { left: 50%; transform: translateX(-50%); bottom: -16px; }
 
   .trust-bar-inner { grid-template-columns: repeat(2, 1fr); }

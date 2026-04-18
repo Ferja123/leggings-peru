@@ -201,8 +201,8 @@ function renderApp() {
         </div>
 
         <div class="hero-visual fade-up-3d" style="animation-delay: 0.2s">
-          <div class="hero-img-wrapper hero-3d-float">
-            <img src="${productPrincipal}" alt="Leggings con forro de borreguito" />
+          <div class="hero-img-wrapper hero-3d-float" style="overflow: hidden; border-radius: 20px;">
+            <video src="/video-demo-1.mp4" autoplay loop muted playsinline preload="auto" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;"></video>
             <div class="hero-float-badge">
               <span class="hfb-icon">🔥</span>
               <div>
@@ -286,6 +286,15 @@ function renderApp() {
         <div class="gallery-card tilt-3d"><img src="${cliente4}" alt="Foto real cliente - producto doblado" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="${cliente5}" alt="Foto real cliente - etiqueta gatito" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="${cliente6}" alt="Foto real cliente - vista lateral" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE -->
+    <section class="section fade-up-3d" style="padding-top: 20px; padding-bottom: 20px;">
+      <div class="section-label">MÍRALO EN ACCIÓN</div>
+      <h2 class="section-title">Así se ve y se siente en la vida real</h2>
+      <div style="max-width: 480px; margin: 24px auto 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.06);">
+        <video src="/video-demo-2.mp4" autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 18px;"></video>
       </div>
     </section>
 
