@@ -2,7 +2,8 @@ import './style.css'
 
 // ═══ IMAGES ═══
 import heroImg from './assets/hero.png'
-import productPrincipal from './assets/product/principal.png'
+// Video replaced the static hero image
+// import productPrincipal from './assets/product/principal.png'
 import cliente1 from './assets/clientes/cliente1.png'
 import cliente2 from './assets/clientes/cliente2.png'
 import cliente3 from './assets/clientes/cliente3.png'
