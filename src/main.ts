@@ -327,6 +327,18 @@ function renderApp() {
         <div class="gallery-card tilt-3d"><img src="${cliente4}" alt="Foto real cliente - producto doblado" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="${cliente5}" alt="Foto real cliente - etiqueta gatito" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="${cliente6}" alt="Foto real cliente - vista lateral" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-1.avif" alt="Foto real cliente - testimonio 1" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-2.avif" alt="Foto real cliente - testimonio 2" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-3.avif" alt="Foto real cliente - testimonio 3" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-4.avif" alt="Foto real cliente - testimonio 4" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-5.avif" alt="Foto real cliente - testimonio 5" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-6.avif" alt="Foto real cliente - testimonio 6" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-7.avif" alt="Foto real cliente - testimonio 7" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-8.avif" alt="Foto real cliente - testimonio 8" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-9.avif" alt="Foto real cliente - testimonio 9" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-10.avif" alt="Foto real cliente - testimonio 10" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-11.avif" alt="Foto real cliente - testimonio 11" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-12.avif" alt="Foto real cliente - testimonio 12" loading="lazy"></div>
       </div>
     </section>
 
