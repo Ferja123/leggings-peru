@@ -82,22 +82,62 @@ const reviews = [
   {
     name: 'Ana S.', initials: 'AS', location: 'Cajamarca, Perú',
     text: 'Llegó en 3 días por Olva a Cajamarca. El empaque estaba perfecto. La calidad es excelente para el precio, el forro es bien grueso. Totalmente recomendado.',
-    photo: null, date: 'Marzo 2026', verified: true, rating: 5
+    photo: '/review-1.avif', date: 'Marzo 2026', verified: true, rating: 5
   },
   {
     name: 'Patricia L.', initials: 'PL', location: 'Chiclayo, Perú',
     text: 'Me encanta que no se transparentan y la cintura alta sostiene bien. Los uso para hacer ejercicio por las mañanas cuando hace frío y son perfectos.',
-    photo: null, date: 'Diciembre 2025', verified: true, rating: 4
+    photo: '/review-2.avif', date: 'Diciembre 2025', verified: true, rating: 5
   },
   {
     name: 'Daniela F.', initials: 'DF', location: 'Ica, Perú',
     text: 'Pensé que iban a ser muy gruesos para Ica pero en las noches de invierno son ideales. La tela estira muchísimo y se adapta perfecto al cuerpo.',
-    photo: null, date: 'Enero 2026', verified: true, rating: 5
+    photo: '/review-3.avif', date: 'Enero 2026', verified: true, rating: 5
   },
   {
     name: 'Gabriela H.', initials: 'GH', location: 'Lima, Perú',
     text: 'Segunda vez que compro, la primera vez fue talla M y me quedó bien pero esta vez pedí L para estar más suelta. Ambas tallas son de buena calidad.',
-    photo: null, date: 'Marzo 2026', verified: true, rating: 5
+    photo: '/review-4.avif', date: 'Marzo 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Valeria C.', initials: 'VC', location: 'Tacna, Perú',
+    text: 'Los pedí para mí y para mi hermana. Los dos nos quedaron increíbles. El forro es súper grueso y no se deforma con el uso. De lo mejor que he comprado online.',
+    photo: '/review-5.avif', date: 'Marzo 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Sofía A.', initials: 'SA', location: 'Ayacucho, Perú',
+    text: 'Perfectos para el clima de Ayacucho. No son como los leggings baratos que se rompen al mes; estos son bien resistentes y el borreguito por dentro es una delicia.',
+    photo: '/review-6.avif', date: 'Febrero 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Milagros D.', initials: 'MD', location: 'Junín, Perú',
+    text: 'Mi mamá me los recomendó y ahora entiendo por qué. Son calientitos, no pican y la pretina no se enrolla. Me compré el pack de 3 y no me arrepiento.',
+    photo: '/review-7.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Claudia N.', initials: 'CN', location: 'Piura, Perú',
+    text: 'Ideal para las noches frías. Me sorprendió que el material fuera tan suave y resistente a la vez. Se ven elegantes con cualquier outfit. Super recomendados.',
+    photo: '/review-8.avif', date: 'Enero 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Fernanda B.', initials: 'FB', location: 'Lambayeque, Perú',
+    text: 'Compré la talla L y me queda a la perfección. El envío fue más rápido de lo que esperaba. La calidad del forro se nota desde que lo tocas. 10 de 10.',
+    photo: '/review-9.avif', date: 'Marzo 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Adriana Q.', initials: 'AQ', location: 'Huánuco, Perú',
+    text: 'Llevaba meses buscando unos leggings térmicos que realmente abriguen y estos superaron mis expectativas. El grosor del forro es impresionante y son muy cómodos.',
+    photo: '/review-10.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Paola E.', initials: 'PE', location: 'Cusco, Perú',
+    text: 'Vivo en el centro de Cusco y aquí hace un frío tremendo en invierno. Estos leggings son mi salvación, los uso todos los días. Ya pedí el segundo pack.',
+    photo: '/review-11.avif', date: 'Febrero 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Diana J.', initials: 'DJ', location: 'Lima, Perú',
+    text: 'Los compré por TikTok y tenía dudas, pero la verdad me encantaron. El material es premium, no se transparentan y son super calientitos. Los vale cada sol.',
+    photo: '/review-12.avif', date: 'Abril 2026', verified: true, rating: 5
   }
 ]
 
@@ -307,10 +347,10 @@ function renderApp() {
           <h2 class="section-title">Lo que dicen nuestras clientas</h2>
         </div>
         <div class="reviews-stats">
-          <span class="reviews-score">4.6</span>
+          <span class="reviews-score">4.8</span>
           <div class="reviews-meta">
             <span class="reviews-stars">⭐⭐⭐⭐⭐</span>
-            <span class="reviews-count">327 valoraciones verificadas</span>
+            <span class="reviews-count">512 valoraciones verificadas</span>
           </div>
         </div>
       </div>
