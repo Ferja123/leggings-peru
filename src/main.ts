@@ -16,12 +16,11 @@ const WHATSAPP_NUMBER = '51919749480'
 
 // ═══ PACKAGES ═══
 const packages = [
-  { id: 1, qty: 1, label: '1 Unidad (Negro)', price: 75, unitPrice: 75, savings: 0, tag: '' },
-  { id: 2, qty: 2, label: 'Pack de 2 (Negros)', price: 129, unitPrice: 64.5, savings: 21, tag: 'POPULAR' },
-  { id: 3, qty: 3, label: 'Pack de 3 (Negros)', price: 179, unitPrice: 59.6, savings: 46, tag: '⭐ MÁS VENDIDO' },
+  { id: 1, qty: 1, label: '1 Unidad (Negro)', price: 75, unitPrice: 75, savingsText: '', tag: '' },
+  { id: 2, qty: 2, label: 'Pack de 2 (Negros)', price: 129, unitPrice: 64.5, savingsText: '🔥 40% DE DESCUENTO', tag: '⭐ MÁS VENDIDO' },
 ]
 
-let selectedPackage = packages[2] // Default: Pack de 3
+let selectedPackage = packages[1] // Default: Pack de 2
 
 // ═══ PURCHASE NOTIFICATIONS ═══
 const purchaseNotifications = [
@@ -420,7 +419,7 @@ function renderApp() {
                 ${pkg.tag ? `<div class="package-tag">${pkg.tag}</div>` : ''}
                 <div class="package-qty" style="font-size: 0.95rem; margin-top: 8px;">${pkg.label}</div>
                 <div class="package-price" style="font-size: 1.5rem;">S/ ${pkg.price.toFixed(2)}</div>
-                ${pkg.savings > 0 ? `<div class="package-savings" style="font-size: 0.75rem;">Ahorras S/ ${pkg.savings.toFixed(2)}</div>` : '<div class="package-savings" style="opacity:0">—</div>'}
+                ${pkg.savingsText ? `<div class="package-savings" style="font-size: 0.85rem; background: #ef4444; color: white; padding: 6px 10px; border-radius: 6px; display: inline-block; font-weight: 800; transform: scale(1.05); margin-top: 6px; box-shadow: 0 4px 12px rgba(239,68,68,0.4); animation: pulse 2s infinite;">${pkg.savingsText}</div>` : '<div class="package-savings" style="opacity:0">—</div>'}
                 <div class="package-shipping" style="margin-bottom: 0;">✓ Envío gratis</div>
                 <div class="package-check" style="top: 8px; right: 8px; width: 24px; height: 24px;">${pkg.id === selectedPackage.id ? '✓' : ''}</div>
               </div>
