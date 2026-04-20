@@ -467,7 +467,13 @@ function renderApp() {
               CONFIRMAR PEDIDO VÍA WHATSAPP
             </button>
           </form>
-          <div class="order-security">🔒 Tus datos están protegidos — Pago contra entrega disponible</div>
+          <div style="display: flex; justify-content: center; gap: 8px; margin-top: 24px; margin-bottom: 8px; flex-wrap: wrap;">
+            <span style="background: rgba(116,36,255,0.1); color:#9b51e0; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(116,36,255,0.25);">💜 Yape</span>
+            <span style="background: rgba(0,188,212,0.1); color:#00bcd4; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(0,188,212,0.25);">🩵 Plin</span>
+            <span style="background: rgba(255,138,101,0.1); color:#ff7043; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(255,138,101,0.25);">🧡 BCP</span>
+            <span style="background: rgba(30,215,96,0.1); color:#1ed760; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(30,215,96,0.25);">🛵 Contra Entrega</span>
+          </div>
+          <div class="order-security">🔒 Tus datos están protegidos — Paga al recibir en casa</div>
         </div>
       </div>
     </section>
