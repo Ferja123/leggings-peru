@@ -137,6 +137,41 @@ const reviews = [
     name: 'Diana J.', initials: 'DJ', location: 'Lima, Perú',
     text: 'Los compré por TikTok y tenía dudas, pero la verdad me encantaron. El material es premium, no se transparentan y son super calientitos. Los vale cada sol.',
     photo: '/review-12.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Micaela R.', initials: 'MR', location: 'Cajamarca, Perú',
+    text: 'Me salvan la vida para salir a trabajar temprano. Son gruesos pero no aprietan el estómago. Totalmente recomendados.',
+    photo: '/review-13.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Rosa V.', initials: 'RV', location: 'Huaraz, Perú',
+    text: 'Acá el frío es fuertísimo y con estos leggings paso normal todo el día. Adentro el peluche es suavecito y la tela de afuera se ve como pantalón fino.',
+    photo: '/review-14.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Teresa C.', initials: 'TC', location: 'Arequipa, Perú',
+    text: '¡Hermosos! Pedí en color negro y gris. Me llegaron a los dos días. La calidad está 100% justificada, no compraría otros.',
+    photo: '/review-15.avif', date: 'Mayo 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Liliana M.', initials: 'LM', location: 'Lima, Perú',
+    text: 'Me encanta que tengan faja ancha arriba porque me disimula todo. Además super calentitos para ver tele o salir al parque con mis hijos.',
+    photo: '/review-16.avif', date: 'Mayo 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Julieta G.', initials: 'JG', location: 'Puno, Perú',
+    text: 'Si aguantan el frío de Puno, aguantan todo jaja. En serio son muy calientes y no se bajan cuando caminas rápido. Excelente producto.',
+    photo: '/review-17.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Bárbara T.', initials: 'BT', location: 'Trujillo, Perú',
+    text: 'Me los pongo para salir en la noche y wow, arman espectacular. La tela estira super bien, pedí talla M, llego al toque pago contra entrega.',
+    photo: '/review-18.avif', date: 'Abril 2026', verified: true, rating: 5
+  },
+  {
+    name: 'Luciana F.', initials: 'LF', location: 'Moquegua, Perú',
+    text: 'Es la tercera vez que les compro. La verdad no hay pierde con estas calzas de borrego, he comprado otras baratas en el centro y se deshacen. Estas te duran toda la temporada de heladas.',
+    photo: '/review-19.avif', date: 'Mayo 2026', verified: true, rating: 5
   }
 ]
 
@@ -338,6 +373,13 @@ function renderApp() {
         <div class="gallery-card tilt-3d"><img src="/review-10.avif" alt="Foto real cliente - testimonio 10" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="/review-11.avif" alt="Foto real cliente - testimonio 11" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="/review-12.avif" alt="Foto real cliente - testimonio 12" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-13.avif" alt="Foto real cliente - testimonio 13" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-14.avif" alt="Foto real cliente - testimonio 14" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-15.avif" alt="Foto real cliente - testimonio 15" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-16.avif" alt="Foto real cliente - testimonio 16" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-17.avif" alt="Foto real cliente - testimonio 17" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-18.avif" alt="Foto real cliente - testimonio 18" loading="lazy"></div>
+        <div class="gallery-card tilt-3d"><img src="/review-19.avif" alt="Foto real cliente - testimonio 19" loading="lazy"></div>
       </div>
     </section>
 
