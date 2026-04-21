@@ -16,8 +16,8 @@ const WHATSAPP_NUMBER = '51919749480'
 
 // ═══ PACKAGES ═══
 const packages = [
-  { id: 1, qty: 1, label: '1 Unidad (Negro)', price: 75, unitPrice: 75, savingsText: '', tag: '' },
-  { id: 2, qty: 2, label: 'Pack de 2 (Negros)', price: 129, unitPrice: 64.5, savingsText: '🔥 40% DE DESCUENTO', tag: '⭐ MÁS VENDIDO' },
+  { id: 1, qty: 1, label: '1 Unidad (Negro)', price: 79, unitPrice: 79, savingsText: '', tag: '' },
+  { id: 2, qty: 2, label: 'Pack de 2 (Negros)', price: 139, unitPrice: 69.5, savingsText: '🔥 40% DE DESCUENTO', tag: '⭐ MÁS VENDIDO' },
 ]
 
 let selectedPackage = packages[1] // Default: Pack de 2
@@ -250,7 +250,7 @@ function renderApp() {
           </p>
           <div class="hero-price-row">
             <span class="hero-price-old">S/ 125.00</span>
-            <span class="hero-price-current">S/ 75.00</span>
+            <span class="hero-price-current">S/ 79.00</span>
             <span class="hero-price-badge">-40% DCTO</span>
           </div>
 
@@ -536,7 +536,7 @@ function renderApp() {
     <div class="floating-cta" id="floating-cta">
       <div class="floating-cta-inner">
         <div class="floating-cta-info">
-          <span class="floating-cta-price">S/ ${selectedPackage.price.toFixed(2)}</span>
+          <span class="floating-cta-price">S/ 79.00</span>
           <span class="floating-cta-timer" id="floating-timer">00:00:00</span>
         </div>
         <a href="#ordenar" class="floating-cta-btn">
@@ -571,8 +571,8 @@ function renderApp() {
   trackTikTok('ViewContent', {
     content_type: 'product',
     content_id: 'leggings-termicos',
-    contents: [{ content_id: 'leggings-termicos', content_name: 'Leggings Térmicos Premium', quantity: 1, price: 75.00 }],
-    value: 75.00,
+    contents: [{ content_id: 'leggings-termicos', content_name: 'Leggings Térmicos Premium', quantity: 1, price: 79.00 }],
+    value: 79.00,
     currency: 'PEN'
   })
 }
@@ -793,7 +793,7 @@ function setupPackageSelector() {
       const floatingPrice = document.querySelector('.floating-cta-price')
       if (label) label.textContent = `${pkg.label}`
       if (price) price.textContent = `S/ ${pkg.price.toFixed(2)}`
-      if (floatingPrice) floatingPrice.textContent = `S/ ${pkg.price.toFixed(2)}`
+      if (floatingPrice) floatingPrice.textContent = `S/ 79.00`
 
       // TikTok Pixel — AddToCart
       trackTikTok('AddToCart', {
