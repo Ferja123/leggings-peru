@@ -1401,15 +1401,17 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
 }
 
 @media (max-width: 768px) {
+  /* ── Hero ── */
+  .hero { min-height: auto; }
   .hero-content {
     grid-template-columns: 1fr;
-    padding: 50px 20px;
+    padding: 32px 16px 40px;
     text-align: center;
-    gap: 36px;
+    gap: 24px;
   }
-
   .hero-text-block { max-width: 100%; }
-  .hero-subtitle { max-width: 100%; margin-left: auto; margin-right: auto; }
+  .hero-title { font-size: clamp(1.6rem, 6vw, 2.2rem) !important; margin-bottom: 16px !important; }
+  .hero-subtitle { max-width: 100%; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
   .hero-price-row { justify-content: center; }
   .countdown-wrapper { justify-content: center; }
   .stock-indicator { display: flex; flex-direction: column; align-items: center; }
@@ -1417,40 +1419,53 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   .hero-visual { order: -1; }
   .hero-img-wrapper { max-width: 100%; width: 100%; }
   .hero-img-wrapper video { border-radius: 16px !important; }
-  .hero-float-badge { left: 50%; transform: translateX(-50%); bottom: -16px; }
+  .hero-float-badge { left: 50%; transform: translateX(-50%); bottom: -16px; font-size: 0.75rem; }
+  .btn-hero { width: 100%; justify-content: center; padding: 14px 20px !important; font-size: 0.85rem !important; }
 
-  .trust-bar-inner { grid-template-columns: repeat(2, 1fr); }
-  .benefits-grid { grid-template-columns: 1fr; }
+  /* ── Trust Bar ── */
+  .trust-bar-inner { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .trust-item { padding: 10px 8px; gap: 4px; }
+  .trust-icon { font-size: 1.2rem; }
+  .trust-label { font-size: 0.72rem; }
+  .trust-sub { font-size: 0.65rem; }
 
+  /* ── Sections ── */
+  .section { padding: 48px 16px; }
+  .section-title { font-size: clamp(1.4rem, 5vw, 1.8rem); margin-bottom: 12px; }
+  .section-desc { font-size: 0.92rem; margin-bottom: 28px; }
+
+  /* ── Benefits ── */
+  .benefits-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
+  .benefit-card { padding: 20px 18px; }
+  .benefit-card h3 { font-size: 1rem; }
+  .benefit-card p { font-size: 0.85rem; }
+
+  /* ── Packages ── */
   .packages-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
   }
-
   .package-card {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 8px 16px;
+    gap: 6px 14px;
     text-align: left;
-    padding: 20px;
+    padding: 16px;
     align-items: center;
   }
-
   .package-tag {
     position: static;
     transform: none;
     grid-column: 1 / -1;
     justify-self: start;
     border-radius: 6px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
-
-  .package-qty { font-size: 1rem; margin: 0; }
-  .package-price { font-size: 1.5rem; margin: 0; }
+  .package-qty { font-size: 0.95rem; margin: 0; }
+  .package-price { font-size: 1.4rem; margin: 0; }
   .package-unit { margin: 0; }
   .package-savings { margin: 0; }
   .package-shipping { grid-column: 1 / -1; margin: 0; }
-
   .package-check {
     position: static;
     grid-row: 2 / 5;
@@ -1458,34 +1473,67 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
     align-self: center;
   }
 
-  .gallery-card { flex: 0 0 200px; }
+  /* ── Gallery ── */
+  .gallery-card { flex: 0 0 180px; }
+  .gallery-header { padding: 0 16px; }
 
+  /* ── Reviews ── */
   .review-card { min-width: 280px; }
+  .review-photo { max-height: 200px; }
+  .reviews-header-row { flex-direction: column; gap: 12px; padding: 0 8px; }
 
+  /* ── Order Form ── */
   .form-row { grid-template-columns: 1fr; }
-  .order-card { padding: 28px 20px; }
-  .section { padding: 60px 16px; }
-  
+  .order-card { padding: 24px 16px; }
+  .order-section { padding: 48px 12px !important; }
+  .order-summary { padding: 12px 14px; }
+
+  /* ── Floating CTA ── */
+  .floating-cta { display: block; }
+  .floating-cta-inner { padding: 0 2px; }
+  .floating-cta-btn { padding: 12px 22px; font-size: 0.88rem; }
+  body { padding-bottom: 76px; }
+
+  /* ── Notification Toast ── */
   .notif-toast {
     bottom: auto !important;
-    top: 20px !important;
-  }
-
-  .floating-cta { display: block; }
-  body { padding-bottom: 72px; }
-
-  .notif-toast {
-    bottom: 80px;
+    top: 70px !important;
     left: 12px;
     right: 12px;
     max-width: 100%;
+    transform: translateY(-120%) !important;
   }
+  .notif-toast.notif-show {
+    transform: translateY(0) !important;
+  }
+
+  /* ── FAQ ── */
+  .faq-question { padding: 16px 14px; font-size: 0.9rem; }
+  .faq-answer p { font-size: 0.85rem; padding: 0 14px 16px; }
+
+  /* ── Footer ── */
+  .footer { padding: 32px 16px; }
+  .footer-text { font-size: 0.78rem; }
 }
 
 @media (max-width: 480px) {
-  .trust-bar-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .hero-price-current { font-size: 2.2rem; }
-  .countdown-block { padding: 6px 10px; min-width: 46px; }
-  .countdown-block span { font-size: 1.3rem; }
-  .gallery-card { flex: 0 0 170px; }
+  .hero-content { padding: 24px 14px 32px; gap: 20px; }
+  .hero-price-current { font-size: 2rem; }
+  .hero-price-old { font-size: 1rem; }
+  .countdown-block { padding: 6px 8px; min-width: 42px; }
+  .countdown-block span { font-size: 1.2rem; }
+  .countdown-block small { font-size: 0.6rem; }
+  .trust-bar-inner { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .gallery-card { flex: 0 0 160px; }
+  .review-card { min-width: 260px; }
+  .section { padding: 36px 14px; }
+  .section-title { font-size: clamp(1.2rem, 5vw, 1.5rem); }
+  .floating-cta { padding: 8px 10px; }
+  .floating-cta-price { font-size: 1.4rem; }
+  .floating-cta-btn { padding: 11px 18px; font-size: 0.82rem; }
+  .topbar { font-size: 0.68rem; padding: 8px 12px; }
+  .navbar-inner { height: 52px; }
+  .brand { font-size: 1.15rem; }
+  .nav-cta { padding: 8px 16px; font-size: 0.78rem; }
 }
+
