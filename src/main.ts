@@ -9,7 +9,6 @@ import cliente2 from './assets/clientes/cliente2.png'
 import cliente3 from './assets/clientes/cliente3.png'
 import cliente4 from './assets/clientes/cliente4.png'
 import cliente5 from './assets/clientes/cliente5.png'
-import cliente6 from './assets/clientes/cliente6.png'
 
 // ═══ CONSTANTS ═══
 const WHATSAPP_NUMBER = '51919749480'
@@ -355,7 +354,6 @@ function renderApp() {
         <div class="gallery-card tilt-3d"><img src="${cliente3}" alt="Foto real cliente - legging gris" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="${cliente4}" alt="Foto real cliente - producto doblado" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="${cliente5}" alt="Foto real cliente - etiqueta gatito" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="${cliente6}" alt="Foto real cliente - vista lateral" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="/review-1.avif" alt="Foto real cliente - testimonio 1" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="/review-2.avif" alt="Foto real cliente - testimonio 2" loading="lazy"></div>
         <div class="gallery-card tilt-3d"><img src="/review-3.avif" alt="Foto real cliente - testimonio 3" loading="lazy"></div>
