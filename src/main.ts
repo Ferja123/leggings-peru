@@ -541,7 +541,7 @@ function renderApp() {
       <div class="floating-cta-inner">
         <div class="floating-cta-info">
           <span class="floating-cta-price">S/ 79.00</span>
-          <span class="floating-cta-timer" id="floating-timer">00:00:00</span>
+          <span class="floating-cta-timer" id="active-buyers-text" style="color:#ef4444; font-weight:700;">👁️ 14 personas comprando</span>
         </div>
         <a href="#ordenar" class="floating-cta-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -570,6 +570,7 @@ function renderApp() {
   setupNotifications()
   setupPackageSelector()
   setupFAQ()
+  setupActiveBuyers()
 
   // TikTok Pixel — ViewContent
   trackTikTok('ViewContent', {
@@ -716,12 +717,9 @@ function setupCountdown() {
     const hoursEl = document.getElementById('cd-hours')
     const minsEl = document.getElementById('cd-mins')
     const secsEl = document.getElementById('cd-secs')
-    const floatingTimer = document.getElementById('floating-timer')
-
     if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0')
     if (minsEl) minsEl.textContent = String(m).padStart(2, '0')
     if (secsEl) secsEl.textContent = String(s).padStart(2, '0')
-    if (floatingTimer) floatingTimer.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
 
     if (diff <= 0) {
       localStorage.removeItem('lp-cd-end')
@@ -730,6 +728,24 @@ function setupCountdown() {
 
   update()
   setInterval(update, 1000)
+}
+
+// ═══ ACTIVE BUYERS ═══
+function setupActiveBuyers() {
+  const buyersEl = document.getElementById('active-buyers-text')
+  if (!buyersEl) return
+  
+  let currentBuyers = 12 + Math.floor(Math.random() * 8)
+  
+  setInterval(() => {
+    // Randomly fluctuate between 10 and 28
+    const change = Math.floor(Math.random() * 5) - 2
+    currentBuyers += change
+    if (currentBuyers < 10) currentBuyers = 10
+    if (currentBuyers > 28) currentBuyers = 28
+    
+    buyersEl.innerHTML = `👁️ ${currentBuyers} personas comprando`
+  }, 4500)
 }
 
 // ═══ PURCHASE NOTIFICATIONS ═══

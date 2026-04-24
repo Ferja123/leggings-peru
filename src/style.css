@@ -478,6 +478,62 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   animation: none !important;
 }
 
+/* STOCK INDICATOR */
+.stock-indicator {
+  margin-bottom: 32px;
+  background: rgba(200, 149, 108, 0.05);
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(200, 149, 108, 0.15);
+}
+
+.stock-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.stock-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff3b3b, #ff7e5f);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.stock-fill::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: badgeShine 2s infinite linear;
+}
+
+.stock-text {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: block;
+  text-align: center;
+}
+
+.stock-text strong {
+  color: #ff3b3b;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.countdown-wrapper { margin-bottom: 24px; text-align: center; }
+.countdown-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px; }
+.countdown { display: inline-flex; align-items: center; gap: 8px; }
+.countdown-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; min-width: 50px; text-align: center; display: flex; flex-direction: column; }
+.countdown-block span { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--white); line-height: 1; }
+.countdown-block small { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px; }
+.countdown-sep { font-size: 1.2rem; font-weight: 800; color: var(--accent); }
+
 /* Hero Visual */
 .hero-visual {
   display: flex;
