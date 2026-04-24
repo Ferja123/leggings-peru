@@ -216,7 +216,6 @@ function renderApp() {
     <nav class="navbar">
       <div class="navbar-inner">
         <div class="brand">Leggings<span>Perú</span></div>
-        <a href="#ordenar" class="nav-cta">ORDENAR AHORA</a>
       </div>
     </nav>
 

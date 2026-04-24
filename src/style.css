@@ -156,8 +156,7 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
    NAVBAR
    ═══════════════════════════════════════════ */
 .navbar {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   background: rgba(12, 12, 12, 0.92);
   backdrop-filter: blur(24px);
@@ -170,7 +169,7 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 64px;
 }
