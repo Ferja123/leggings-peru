@@ -73,11 +73,7 @@ const reviews = [
     text: 'El detalle del gatito es muy lindo. La cintura alta me moldea perfecto y el forro grueso mantiene el calor todo el día. Son los mejores leggings que he probado.',
     photo: cliente5, date: 'Enero 2026', verified: true, rating: 5
   },
-  {
-    name: 'Carmen V.', initials: 'CV', location: 'Puno, Perú',
-    text: 'Aquí en Puno el frío es intenso y estos leggings me mantienen abrigada todo el día. El material es grueso pero no incómodo. Los uso debajo del pantalón también.',
-    photo: cliente6, date: 'Febrero 2026', verified: true, rating: 5
-  },
+
   {
     name: 'Ana S.', initials: 'AS', location: 'Cajamarca, Perú',
     text: 'Llegó en 3 días por Olva a Cajamarca. El empaque estaba perfecto. La calidad es excelente para el precio, el forro es bien grueso. Totalmente recomendado.',
@@ -418,12 +414,14 @@ function renderApp() {
         <div class="size-table-wrapper">
           <table class="size-table">
             <thead>
-              <tr><th>Talla</th><th>Cintura</th><th>Cadera</th><th>Largo</th><th>Pantalón PE</th></tr>
+              <tr><th>Talla</th><th>Cintura</th><th>Cadera</th><th>Largo</th><th>Pantalón PE</th><th>Stock</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>M</strong></td><td>62 – 90 cm</td><td>74 – 104 cm</td><td>90 cm</td><td>28 – 30</td></tr>
-              <tr><td><strong>L</strong></td><td>66 – 94 cm</td><td>78 – 108 cm</td><td>91 cm</td><td>30 – 32</td></tr>
-              <tr><td><strong>XXL</strong></td><td>74 – 102 cm</td><td>86 – 116 cm</td><td>93 cm</td><td>34+</td></tr>
+              <tr style="opacity:0.4;"><td><strong>S</strong></td><td>58 – 86 cm</td><td>70 – 100 cm</td><td>88 cm</td><td>26 – 28</td><td style="color:#ef4444;font-weight:700;">AGOTADO</td></tr>
+              <tr><td><strong>M</strong></td><td>62 – 90 cm</td><td>74 – 104 cm</td><td>90 cm</td><td>28 – 30</td><td style="color:var(--green);font-weight:600;">✓ Disponible</td></tr>
+              <tr><td><strong>L</strong></td><td>66 – 94 cm</td><td>78 – 108 cm</td><td>91 cm</td><td>30 – 32</td><td style="color:var(--green);font-weight:600;">✓ Disponible</td></tr>
+              <tr style="opacity:0.4;"><td><strong>XL</strong></td><td>70 – 98 cm</td><td>82 – 112 cm</td><td>92 cm</td><td>32 – 34</td><td style="color:#ef4444;font-weight:700;">AGOTADO</td></tr>
+              <tr><td><strong>XXL</strong></td><td>74 – 102 cm</td><td>86 – 116 cm</td><td>93 cm</td><td>34+</td><td style="color:var(--green);font-weight:600;">✓ Disponible</td></tr>
             </tbody>
           </table>
         </div>
@@ -490,8 +488,10 @@ function renderApp() {
                 <label class="form-label">Talla</label>
                 <select class="form-input" id="f-size" required>
                   <option value="">Seleccionar</option>
+                  <option value="S" disabled>S (26–28) — AGOTADO</option>
                   <option value="M">M (28–30)</option>
                   <option value="L">L (30–32)</option>
+                  <option value="XL" disabled>XL (32–34) — AGOTADO</option>
                   <option value="XXL">XXL (34+)</option>
                 </select>
               </div>
@@ -509,11 +509,16 @@ function renderApp() {
               CONFIRMAR PEDIDO VÍA WHATSAPP
             </button>
           </form>
-          <div style="display: flex; justify-content: center; gap: 8px; margin-top: 24px; margin-bottom: 8px; flex-wrap: wrap;">
-            <span style="background: rgba(116,36,255,0.1); color:#9b51e0; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(116,36,255,0.25);">💜 Yape</span>
-            <span style="background: rgba(0,188,212,0.1); color:#00bcd4; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(0,188,212,0.25);">🩵 Plin</span>
-            <span style="background: rgba(255,138,101,0.1); color:#ff7043; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(255,138,101,0.25);">🧡 BCP</span>
-            <span style="background: rgba(30,215,96,0.1); color:#1ed760; padding:6px 14px; border-radius:24px; font-weight:800; font-size:0.8rem; border: 1px solid rgba(30,215,96,0.25);">🛵 Contra Entrega</span>
+          <div style="display:flex;justify-content:center;gap:6px;margin-top:24px;margin-bottom:6px;flex-wrap:wrap;">
+            <span style="background:rgba(116,36,255,0.1);color:#9b51e0;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(116,36,255,0.25);">💜 Yape</span>
+            <span style="background:rgba(0,188,212,0.1);color:#00bcd4;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(0,188,212,0.25);">🩵 Plin</span>
+            <span style="background:rgba(255,102,0,0.1);color:#ff6600;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(255,102,0,0.25);">🧾 PagoEfectivo</span>
+            <span style="background:rgba(30,215,96,0.1);color:#1ed760;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(30,215,96,0.25);">🛵 Contra Entrega</span>
+          </div>
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:6px;margin-bottom:10px;flex-wrap:wrap;align-items:center;">
+            <svg viewBox="0 0 48 32" width="42" height="28" style="border-radius:4px;background:#fff;padding:2px 4px;"><text x="24" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#1A1F71" font-family="Arial">VISA</text></svg>
+            <svg viewBox="0 0 48 32" width="42" height="28" style="border-radius:4px;background:#fff;padding:2px 4px;"><circle cx="19" cy="16" r="10" fill="#EB001B" opacity="0.8"/><circle cx="29" cy="16" r="10" fill="#F79E1B" opacity="0.8"/></svg>
+            <svg viewBox="0 0 48 32" width="42" height="28" style="border-radius:4px;background:#fff;padding:2px 4px;"><text x="24" y="20" text-anchor="middle" font-size="7" font-weight="700" fill="#016FD0" font-family="Arial">AMEX</text></svg>
           </div>
           <div class="order-security">🔒 Tus datos están protegidos — Paga al recibir en casa</div>
         </div>

@@ -35,7 +35,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: var(--font-body);
@@ -44,6 +44,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
 img { max-width: 100%; display: block; }
@@ -54,42 +55,32 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
    3D KEYFRAME ANIMATIONS
    ═══════════════════════════════════════════ */
 
-/* Hero product 3D floating */
+/* Hero product floating — simplified for perf */
 @keyframes heroFloat {
-  0%, 100% { transform: translateY(0) rotateY(0deg) rotateX(0deg); }
-  25% { transform: translateY(-14px) rotateY(2.5deg) rotateX(1.5deg); }
-  50% { transform: translateY(-6px) rotateY(-1.5deg) rotateX(-1deg); }
-  75% { transform: translateY(-20px) rotateY(1.8deg) rotateX(2deg); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
 
-/* 3D fade-up entrance */
+/* fade-up entrance — simplified */
 @keyframes fadeUp3d {
-  from {
-    opacity: 0;
-    transform: perspective(800px) translateY(40px) rotateX(8deg);
-  }
-  to {
-    opacity: 1;
-    transform: perspective(800px) translateY(0) rotateX(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Floating gradient orbs */
+/* Floating gradient orbs — simplified */
 @keyframes orbFloat1 {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  33% { transform: translate3d(40px, -40px, 60px) scale(1.1); }
-  66% { transform: translate3d(-30px, 25px, -40px) scale(0.95); }
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
 }
 
 @keyframes orbFloat2 {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  33% { transform: translate3d(-50px, 30px, -50px) scale(1.15); }
-  66% { transform: translate3d(35px, -20px, 45px) scale(0.9); }
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, 20px); }
 }
 
 @keyframes orbFloat3 {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(25px, -35px, 30px) scale(1.08); }
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(15px, -20px); }
 }
 
 /* Button pulse glow */
@@ -1377,19 +1368,17 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
    3D SHARED STYLES
    ═══════════════════════════════════════════ */
 .tilt-3d {
-  transform-style: preserve-3d;
   transition: transform 0.15s ease-out;
-  will-change: transform;
 }
 
 /* Entrance Animation */
 .fade-up-3d {
   opacity: 0;
-  transform: perspective(800px) translateY(40px) rotateX(6deg);
+  transform: translateY(30px);
 }
 
 .fade-up-3d.animate-in {
-  animation: fadeUp3d 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fadeUp3d 0.6s ease-out forwards;
 }
 
 /* ═══════════════════════════════════════════
