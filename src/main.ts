@@ -37,12 +37,14 @@ const purchaseNotifications = [
 
 // ═══ FAQ DATA ═══
 const faqs = [
-  { q: '¿Cuánto demora el envío?', a: 'Enviamos a todo el Perú. Lima: 1-2 días hábiles. Provincias: 3-5 días hábiles vía Olva Courier o Shalom.' },
-  { q: '¿Cómo puedo pagar?', a: 'Aceptamos Yape, Plin, transferencia BCP/Interbank, y pago contra entrega en Lima Metropolitana.' },
-  { q: '¿Qué talla debo elegir?', a: 'Consulta nuestra guía de tallas. Si estás entre dos tallas, elige la más grande. El material es elástico y se adapta al cuerpo.' },
-  { q: '¿Puedo cambiar de talla?', a: 'Sí, ofrecemos cambio de talla sin costo adicional dentro de los primeros 7 días después de recibir tu pedido.' },
-  { q: '¿El forro de borreguito es real?', a: 'Sí, el interior es de lana sintética de cordero ultra gruesa. Es hipoalergénico, suave y mucho más cálido que el polar convencional.' },
-  { q: '¿Se pueden lavar en lavadora?', a: 'Sí, recomendamos lavado en ciclo delicado con agua fría y secar al aire. No usar secadora para mantener la calidad del forro.' },
+  { q: '¿Cuánto demora el envío?', a: 'Enviamos a todo el Perú. Lima: 1-2 días hábiles. Provincias: 3-5 días hábiles vía Olva Courier o Shalom. Te enviamos el número de seguimiento por WhatsApp.' },
+  { q: '¿Cómo puedo pagar?', a: 'Aceptamos Yape, Plin, transferencia BCP/Interbank, y pago contra entrega en Lima Metropolitana. ¡Elige el método que más te convenga!' },
+  { q: '¿Qué talla debo elegir?', a: 'Consulta nuestra guía de tallas más abajo. Si estás entre dos tallas, elige la más grande. El material es elástico y se adapta perfecto al cuerpo.' },
+  { q: '¿Puedo cambiar de talla?', a: 'Sí, ofrecemos cambio de talla sin costo adicional dentro de los primeros 7 días después de recibir tu pedido. Solo contáctanos por WhatsApp.' },
+  { q: '¿El forro de borreguito es real?', a: 'Sí, el interior es de lana sintética de cordero ultra gruesa. Es hipoalergénico, suave y mucho más cálido que el polar convencional. Puedes verlo en nuestros videos.' },
+  { q: '¿Se pueden lavar en lavadora?', a: 'Sí, recomendamos lavado en ciclo delicado con agua fría y secar al aire. No usar secadora para mantener la calidad del forro borreguito.' },
+  { q: '¿Están disponibles en más colores?', a: 'Actualmente manejamos negro y gris antracita, los colores más versátiles para combinar con cualquier outfit. Próximamente ampliaremos la gama de colores.' },
+  { q: '¿Hay garantía si el producto llega dañado?', a: 'Sí, garantizamos 100% tu satisfacción. Si el producto llega con algún defecto de fábrica, te lo reemplazamos sin costo. Solo envíanos foto del problema por WhatsApp.' },
 ]
 
 // ═══ REVIEWS DATA ═══
@@ -235,13 +237,21 @@ function renderApp() {
             <span class="badge-live"></span>
             🔥 VISTO EN TIKTOK — Oferta Exclusiva
           </div>
-          <h1 class="hero-title" style="margin-bottom: 24px;">
-            El Secreto para un Invierno Elegante<br>
-            <em style="font-size: clamp(1.4rem, 3vw, 2.2rem); display: block; margin-top: 8px;">(y sin pasar una gota de frío)</em>
+          <h1 class="hero-title" style="margin-bottom: 16px;">
+            Tu piel merece<br>
+            <em>el calor que se siente,<br>y el estilo que se ve</em>
           </h1>
           <p class="hero-subtitle">
-            Descubre los Leggings Térmicos Premium. El efecto moldeador que estiliza tu figura con el abrigo de un interior de corderito de alta densidad.
+            Los únicos leggings con <strong style="color:var(--accent)">forro de borreguito ultra denso</strong> que te mantienen caliente todo el día, moldean tu figura con cintura alta y se ven elegantes con cualquier look.
           </p>
+
+          <div class="hero-value-pills">
+            <div class="hero-value-pill"><span>🔥</span> Abrigo extremo</div>
+            <div class="hero-value-pill"><span>✨</span> Efecto moldeador</div>
+            <div class="hero-value-pill"><span>💎</span> Acabado premium mate</div>
+            <div class="hero-value-pill"><span>🛡️</span> No se transparenta</div>
+          </div>
+
           <div class="hero-price-row">
             <span class="hero-price-old">S/ 125.00</span>
             <span class="hero-price-current">S/ 79.00</span>
@@ -310,82 +320,41 @@ function renderApp() {
       </div>
     </div>
 
-
-
-    <!-- BENEFITS & STORY -->
-    <section class="section fade-up-3d" id="detalles">
-      <div class="section-label">TECNOLOGÍA TEXTIL</div>
-      <h2 class="section-title">No comprometas tu estética por el clima.</h2>
-      <p class="section-desc" style="max-width: 800px; font-size: 1.05rem; margin-bottom: 24px;">
-        Ya sentiste el cambio de clima. Las noches frías y la humedad intensa han vuelto. ¿Vas a pasar otro invierno escondiendo tu estilo bajo capas de ropa incómoda o jeans que parecen hielo?
-      </p>
-      <p class="section-desc" style="max-width: 800px; font-size: 1.05rem;">
-        Diseñados para la mujer moderna. Nuestros Leggings Térmicos no son una prenda básica, son tecnología textil en cada detalle:
-      </p>
-      
-      <div class="benefits-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        <div class="benefit-card tilt-3d">
-          <div class="benefit-icon">🔥</div>
-          <h3>Aislamiento Térmico Total</h3>
-          <p>Interior forrado con corderito extra suave que retiene tu calor corporal, bloqueando el viento y la humedad. Despídete del frío intenso.</p>
+    <!-- PRUEBA SOCIAL — MÉTRICAS -->
+    <section class="social-proof-section fade-up-3d" id="resenas">
+      <div class="social-proof-inner">
+        <div style="text-align:center;">
+          <div class="section-label">PRUEBA SOCIAL</div>
+          <h2 class="section-title">Miles de peruanas ya lo comprobaron</h2>
+          <p class="section-desc" style="max-width:600px;margin:0 auto 0;">Cada número aquí representa una mujer que dejó de pasar frío sin renunciar a su estilo.</p>
         </div>
-        <div class="benefit-card tilt-3d">
-          <div class="benefit-icon">✨</div>
-          <h3>Efecto Moldeador y Push-Up</h3>
-          <p>Su pretina ancha controla el abdomen y estiliza tus piernas sin añadir volumen extra. Te verás más delgada, no más abrigada.</p>
+        <div class="social-proof-metrics">
+          <div class="metric-card tilt-3d">
+            <span class="metric-icon">🛒</span>
+            <div class="metric-number">2,<span>100</span>+</div>
+            <div class="metric-label">Unidades vendidas<br>en los últimos 30 días</div>
+          </div>
+          <div class="metric-card tilt-3d">
+            <span class="metric-icon">⭐</span>
+            <div class="metric-number">4.<span>8</span></div>
+            <div class="metric-label">Calificación promedio<br>de 512 reseñas verificadas</div>
+          </div>
+          <div class="metric-card tilt-3d">
+            <span class="metric-icon">🔄</span>
+            <div class="metric-number"><span>73</span>%</div>
+            <div class="metric-label">De clientes compran<br>un segundo pack</div>
+          </div>
+          <div class="metric-card tilt-3d">
+            <span class="metric-icon">🗺️</span>
+            <div class="metric-number"><span>25</span>+</div>
+            <div class="metric-label">Ciudades del Perú<br>con envíos activos</div>
+          </div>
         </div>
-        <div class="benefit-card tilt-3d">
-          <div class="benefit-icon">💎</div>
-          <h3>Estética Premium y Elegante</h3>
-          <p>Acabado mate impecable que combina perfecto con botas, abrigos y blazers. Eleva tu outfit mientras mantienes el máximo confort.</p>
-        </div>
+        <p class="social-proof-gallery-label">📸 Fotos reales enviadas por nuestras clientas</p>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="gallery-section">
-      <div class="gallery-header">
-        <div class="section-label">FOTOS REALES</div>
-        <h2 class="section-title">Nuestras clientas lo comprueban</h2>
-      </div>
-      <div class="gallery-scroll">
-        <div class="gallery-card tilt-3d"><img src="${cliente1}" alt="Foto real cliente - forro borreguito" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="${cliente2}" alt="Foto real cliente - detalle interior" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="${cliente3}" alt="Foto real cliente - legging gris" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="${cliente4}" alt="Foto real cliente - producto doblado" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="${cliente5}" alt="Foto real cliente - etiqueta gatito" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-1.avif" alt="Foto real cliente - testimonio 1" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-2.avif" alt="Foto real cliente - testimonio 2" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-3.avif" alt="Foto real cliente - testimonio 3" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-4.avif" alt="Foto real cliente - testimonio 4" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-5.avif" alt="Foto real cliente - testimonio 5" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-6.avif" alt="Foto real cliente - testimonio 6" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-7.avif" alt="Foto real cliente - testimonio 7" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-8.avif" alt="Foto real cliente - testimonio 8" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-9.avif" alt="Foto real cliente - testimonio 9" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-10.avif" alt="Foto real cliente - testimonio 10" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-11.avif" alt="Foto real cliente - testimonio 11" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-12.avif" alt="Foto real cliente - testimonio 12" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-13.avif" alt="Foto real cliente - testimonio 13" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-14.avif" alt="Foto real cliente - testimonio 14" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-15.avif" alt="Foto real cliente - testimonio 15" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-16.avif" alt="Foto real cliente - testimonio 16" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-17.avif" alt="Foto real cliente - testimonio 17" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-18.avif" alt="Foto real cliente - testimonio 18" loading="lazy"></div>
-        <div class="gallery-card tilt-3d"><img src="/review-19.avif" alt="Foto real cliente - testimonio 19" loading="lazy"></div>
-      </div>
-    </section>
-
-    <!-- VIDEO SHOWCASE -->
-    <section class="section fade-up-3d" style="padding-top: 20px; padding-bottom: 20px;">
-      <div class="section-label">MÍRALO EN ACCIÓN</div>
-      <h2 class="section-title">Así se ve y se siente en la vida real</h2>
-      <div style="max-width: 480px; margin: 24px auto 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.06); background-color: #222;">
-        <video class="lazy-video" data-src="/video-demo-2.mp4" autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 18px; opacity: 0; transition: opacity 0.5s ease-in-out;"></video>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
+    <!-- REVIEWS — debajo de prueba social -->
     <section class="section fade-up-3d" id="resenas">
       <div class="reviews-header-row">
         <div>
@@ -402,6 +371,203 @@ function renderApp() {
       </div>
       <div class="reviews-grid" id="reviews-container"></div>
     </section>
+
+    <!-- BENEFICIOS ORIENTADOS AL CLIENTE -->
+    <section class="benefits-v2-section fade-up-3d">
+      <div class="benefits-v2-inner">
+        <div class="section-label">BENEFICIOS REALES</div>
+        <h2 class="section-title">Así cambia tu vida con nuestros leggings</h2>
+        <p class="section-desc">Cada detalle fue pensado para resolver los problemas reales que tienes cada invierno.</p>
+        <div class="benefits-v2-grid">
+
+          <div class="benefit-v2-card tilt-3d">
+            <div class="benefit-v2-img-wrap">
+              <img src="/benefit-thermal.png" alt="Aislamiento térmico borreguito" class="benefit-v2-img" loading="lazy">
+              <div class="benefit-v2-glow" style="--glow-color: rgba(255,120,50,0.25);"></div>
+            </div>
+            <div class="benefit-v2-before">Antes: Tiritabas de frío en casa</div>
+            <div class="benefit-v2-arrow"><span></span></div>
+            <div class="benefit-v2-after">Ahora: Calor envolvente todo el día</div>
+            <div class="benefit-v2-title">Aislamiento térmico de borreguito</div>
+            <p class="benefit-v2-desc">El interior de lana sintética retiene tu calor corporal. Perfectos para el frío de la sierra y las noches heladas de Lima.</p>
+          </div>
+
+          <div class="benefit-v2-card tilt-3d">
+            <div class="benefit-v2-img-wrap">
+              <img src="/benefit-shaping.png" alt="Efecto moldeador cintura alta" class="benefit-v2-img" loading="lazy">
+              <div class="benefit-v2-glow" style="--glow-color: rgba(200,149,108,0.25);"></div>
+            </div>
+            <div class="benefit-v2-before">Antes: Ropa que te hacía ver más grande</div>
+            <div class="benefit-v2-arrow"><span></span></div>
+            <div class="benefit-v2-after">Ahora: Abrigada y estilizada a la vez</div>
+            <div class="benefit-v2-title">Efecto moldeador + push-up</div>
+            <p class="benefit-v2-desc">La pretina ancha de 10 cm controla el abdomen y estiliza tus piernas sin añadir volumen. Te verás más delgada, no más abrigada.</p>
+          </div>
+
+          <div class="benefit-v2-card tilt-3d">
+            <div class="benefit-v2-img-wrap">
+              <img src="/benefit-premium.png" alt="Acabado mate premium opaco" class="benefit-v2-img" loading="lazy">
+              <div class="benefit-v2-glow" style="--glow-color: rgba(180,150,220,0.2);"></div>
+            </div>
+            <div class="benefit-v2-before">Antes: Evitabas salir porque no te sentías bien</div>
+            <div class="benefit-v2-arrow"><span></span></div>
+            <div class="benefit-v2-after">Ahora: Sales con confianza en cualquier look</div>
+            <div class="benefit-v2-title">Acabado mate premium opaco</div>
+            <p class="benefit-v2-desc">100% opacos, nunca se transparentan. Combínalos con botas, abrigos o sneakers. Elegantes para trabajar, salir o hacer ejercicio.</p>
+          </div>
+
+          <div class="benefit-v2-card tilt-3d">
+            <div class="benefit-v2-img-wrap">
+              <img src="/benefit-stretch.png" alt="Tela 4-way stretch hipoalergénica" class="benefit-v2-img" loading="lazy">
+              <div class="benefit-v2-glow" style="--glow-color: rgba(100,200,255,0.2);"></div>
+            </div>
+            <div class="benefit-v2-before">Antes: Leggings baratos que se caên o pican</div>
+            <div class="benefit-v2-arrow"><span></span></div>
+            <div class="benefit-v2-after">Ahora: Comodidad total sin ajustes</div>
+            <div class="benefit-v2-title">Tela 4-way stretch hipoalergénica</div>
+            <p class="benefit-v2-desc">La tela se estira en las 4 direcciones y vuelve a su forma. Sin picazón, sin enrollamiento en la cintura, sin incomodidad al sentarte.</p>
+          </div>
+
+          <div class="benefit-v2-card tilt-3d">
+            <div class="benefit-v2-img-wrap">
+              <img src="/benefit-durability.png" alt="Durabilidad temporada a temporada" class="benefit-v2-img" loading="lazy">
+              <div class="benefit-v2-glow" style="--glow-color: rgba(143,214,133,0.2);"></div>
+            </div>
+            <div class="benefit-v2-before">Antes: Comprabas cada temporada y se rompían</div>
+            <div class="benefit-v2-arrow"><span></span></div>
+            <div class="benefit-v2-after">Ahora: Una inversión que te dura años</div>
+            <div class="benefit-v2-title">Durabilidad comprobada temporada a temporada</div>
+            <p class="benefit-v2-desc">Costura reforzada en zonas de tensión. Lavable en máquina en ciclo delicado. Nuestras clientas los usan temporada tras temporada.</p>
+          </div>
+
+          <div class="benefit-v2-card tilt-3d">
+            <div class="benefit-v2-img-wrap">
+              <img src="/benefit-safe.png" alt="Compra 100% protegida" class="benefit-v2-img" loading="lazy">
+              <div class="benefit-v2-glow" style="--glow-color: rgba(200,149,108,0.2);"></div>
+            </div>
+            <div class="benefit-v2-before">Antes: Desconfiabas de las compras online</div>
+            <div class="benefit-v2-arrow"><span></span></div>
+            <div class="benefit-v2-after">Ahora: Compra segura con garantía real</div>
+            <div class="benefit-v2-title">Compra 100% protegida</div>
+            <p class="benefit-v2-desc">Pago contra entrega en Lima y seguimiento de tu pedido por WhatsApp desde que sale del almacén hasta que llega a tu puerta.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIADORES -->
+    <section class="differentiators-section fade-up-3d">
+      <div class="differentiators-inner">
+        <div class="section-label">POR QUÉ ELEGIRNOS</div>
+        <h2 class="section-title">La diferencia que se siente<br><em style="color:var(--accent);font-style:normal;">desde el primer uso</em></h2>
+        <p class="section-desc">No somos otro legging del mercado. Aquí está lo que nos hace diferentes:</p>
+
+        <!-- STATS ROW -->
+        <div class="diff-stats-row">
+          <div class="diff-stat">
+            <div class="diff-stat-num">2<span>x</span></div>
+            <div class="diff-stat-label">más grueso que la competencia</div>
+          </div>
+          <div class="diff-stat-divider"></div>
+          <div class="diff-stat">
+            <div class="diff-stat-num">10<span>cm</span></div>
+            <div class="diff-stat-label">de pretina con control abdominal</div>
+          </div>
+          <div class="diff-stat-divider"></div>
+          <div class="diff-stat">
+            <div class="diff-stat-num">100<span>%</span></div>
+            <div class="diff-stat-label">opaco — jamas se transparenta</div>
+          </div>
+          <div class="diff-stat-divider"></div>
+          <div class="diff-stat">
+            <div class="diff-stat-num">4<span>dirs</span></div>
+            <div class="diff-stat-label">de elasticidad sin deformarse</div>
+          </div>
+        </div>
+
+        <!-- FEATURE CARDS -->
+        <div class="diff-features-grid">
+          <div class="diff-feature-card tilt-3d">
+            <div class="diff-feature-icon-v2">
+              <span>🐑</span>
+              <div class="diff-icon-ring"></div>
+            </div>
+            <div class="diff-feature-text">
+              <h4>Borreguito de alta densidad</h4>
+              <p>Interior con el doble de grosor del estándar. No se aplana, no pierde calor, no pica. El forro que realmente abriga.</p>
+              <span class="diff-feature-badge">✓ Exclusivo LeggingsPerú</span>
+            </div>
+          </div>
+          <div class="diff-feature-card tilt-3d">
+            <div class="diff-feature-icon-v2">
+              <span>📐</span>
+              <div class="diff-icon-ring"></div>
+            </div>
+            <div class="diff-feature-text">
+              <h4>Pretina ancha 10 cm</h4>
+              <p>Actúa como faja suave. Sostiene el abdomen, estiliza la cintura y no se enrolla al sentarte o agacharte.</p>
+              <span class="diff-feature-badge">✓ Efecto faja sin apretar</span>
+            </div>
+          </div>
+          <div class="diff-feature-card tilt-3d">
+            <div class="diff-feature-icon-v2">
+              <span>✨</span>
+              <div class="diff-icon-ring"></div>
+            </div>
+            <div class="diff-feature-text">
+              <h4>Acabado mate 100% opaco</h4>
+              <p>La tela exterior tiene textura mate satinada que nunca se transparenta y se ve premium con cualquier outfit.</p>
+              <span class="diff-feature-badge">✓ Sin transparencias</span>
+            </div>
+          </div>
+          <div class="diff-feature-card tilt-3d">
+            <div class="diff-feature-icon-v2">
+              <span>📦</span>
+              <div class="diff-icon-ring"></div>
+            </div>
+            <div class="diff-feature-text">
+              <h4>Envío con seguimiento WhatsApp</h4>
+              <p>Te enviamos tu número de guía Olva Courier por WhatsApp. Rastreo en tiempo real desde que sale hasta que llega.</p>
+              <span class="diff-feature-badge">✓ Seguimiento en tiempo real</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLA COMPARATIVA -->
+        <div class="comparison-table-wrapper">
+          <div class="comparison-table-title">🏆 LeggingsPerú vs. Mercado genérico</div>
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th class="col-us">✨ LeggingsPerú</th>
+                <th class="col-them">Leggings genéricos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Forro de borreguito grueso</td><td class="cell-yes col-us">✓</td><td class="cell-no">✗</td></tr>
+              <tr><td>Pretina ancha 10 cm con control abdominal</td><td class="cell-yes col-us">✓</td><td class="cell-no">✗</td></tr>
+              <tr><td>100% opaco (no se transparenta)</td><td class="cell-yes col-us">✓</td><td class="cell-no">✗</td></tr>
+              <tr><td>Efecto push-up y moldeador</td><td class="cell-yes col-us">✓</td><td class="cell-no">✗</td></tr>
+              <tr><td>Pago contra entrega Lima</td><td class="cell-yes col-us">✓</td><td class="cell-no">✗</td></tr>
+              <tr><td>Envío con seguimiento WhatsApp</td><td class="cell-yes col-us">✓</td><td class="cell-no">✗</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE -->
+    <section class="section fade-up-3d" style="padding-top: 20px; padding-bottom: 20px;">
+      <div class="section-label">MÍRALO EN ACCIÓN</div>
+      <h2 class="section-title">Así se ve y se siente en la vida real</h2>
+      <div style="max-width: 480px; margin: 24px auto 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.06); background-color: #222;">
+        <video class="lazy-video" data-src="/video-demo-2.mp4" autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 18px; opacity: 0; transition: opacity 0.5s ease-in-out;"></video>
+      </div>
+    </section>
+
+
 
     <!-- SIZE GUIDE -->
     <section class="size-section">
@@ -441,83 +607,243 @@ function renderApp() {
           </div>
         `).join('')}
       </div>
+      <div class="faq-cta-banner">
+        <div class="faq-cta-text">
+          <h4>¿Tu pregunta no está aquí?</h4>
+          <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
+        </div>
+        <a href="https://wa.me/51919749480?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20leggings%20t%C3%A9rmicos" target="_blank" class="faq-cta-btn">
+          💬 Escribir por WhatsApp
+        </a>
+      </div>
     </section>
 
     <!-- ORDER FORM -->
     <section class="order-section" id="ordenar">
-      <div class="order-wrapper fade-up-3d" style="max-width: 680px;">
-        <div class="order-card">
-          <h2>Realiza tu pedido</h2>
-          <p class="order-sub">Selecciona tu paquete y completa tus datos para WhatsApp. <strong style="color: var(--green);">¡Todos incluyen envío gratis!</strong></p>
+      <div class="order-section-header">
+        <div class="order-section-label">ÚLTIMO PASO</div>
+        <h2 class="order-section-title">¡Reserva los tuyos ahora!</h2>
+        <p class="order-section-desc">Elige tu pack, completa tus datos y te llegará directo a tu puerta 🚪</p>
+      </div>
 
-          <div class="packages-grid" style="margin-top: 10px; margin-bottom: 30px;">
+      <div class="order-wrapper fade-up-3d" style="max-width: 700px;">
+        <div class="order-card">
+
+          <!-- PAQUETES -->
+          <div class="order-card-step-label"><span>1</span> Elige tu paquete</div>
+          <div class="packages-grid" style="margin-top: 12px; margin-bottom: 28px;">
             ${packages.map(pkg => `
-              <div class="package-card tilt-3d ${pkg.id === selectedPackage.id ? 'package-selected' : ''} ${pkg.tag === '⭐ MÁS VENDIDO' ? 'package-best' : ''}" data-pkg-id="${pkg.id}" style="padding: 24px 16px;">
+              <div class="package-card tilt-3d ${pkg.id === selectedPackage.id ? 'package-selected' : ''} ${pkg.tag === '⭐ MÁS VENDIDO' ? 'package-best' : ''}" data-pkg-id="${pkg.id}">
                 ${pkg.tag ? `<div class="package-tag">${pkg.tag}</div>` : ''}
-                <div class="package-qty" style="font-size: 0.95rem; margin-top: 8px;">${pkg.label}</div>
-                <div class="package-price" style="font-size: 1.5rem;">S/ ${pkg.price.toFixed(2)}</div>
-                ${pkg.savingsText ? `<div class="package-savings" style="font-size: 0.85rem; background: #ef4444; color: white; padding: 6px 10px; border-radius: 6px; display: inline-block; font-weight: 800; transform: scale(1.05); margin-top: 6px; box-shadow: 0 4px 12px rgba(239,68,68,0.4); animation: pulse 2s infinite;">${pkg.savingsText}</div>` : '<div class="package-savings" style="opacity:0">—</div>'}
-                <div class="package-shipping" style="margin-bottom: 0;">✓ Envío gratis</div>
-                <div class="package-check" style="top: 8px; right: 8px; width: 24px; height: 24px;">${pkg.id === selectedPackage.id ? '✓' : ''}</div>
+                <div class="package-qty">${pkg.label}</div>
+                <div class="package-price-row">
+                  <div class="package-price">S/ ${pkg.price.toFixed(2)}</div>
+                  <div class="package-price-old">S/ ${(pkg.price * 1.4).toFixed(0)}</div>
+                </div>
+                ${pkg.qty > 1 ? `<div class="package-unit-price">S/ ${pkg.unitPrice.toFixed(2)} c/u</div>` : ''}
+                ${pkg.savingsText ? `<div class="package-savings">${pkg.savingsText}</div>` : '<div class="package-savings" style="opacity:0">—</div>'}
+                <div class="package-perks">
+                  <span>✓ Envío gratis</span>
+                  <span>✓ Pago contra entrega</span>
+                </div>
+                <div class="package-check">${pkg.id === selectedPackage.id ? '✓' : ''}</div>
               </div>
             `).join('')}
           </div>
-          
-          <div class="order-summary" id="order-summary">
-            <div class="order-summary-left" id="order-summary-label">${selectedPackage.label}</div>
-            <div class="order-summary-right">
-              <div class="order-summary-price" id="order-summary-price">S/ ${selectedPackage.price.toFixed(2)}</div>
-              <div class="order-summary-ship">✓ Envío gratis incluido</div>
+
+          <!-- RESUMEN DINÁMICO DEL PRECIO -->
+          <div class="order-price-summary" id="order-summary">
+            <div class="order-price-summary-icon">🛒</div>
+            <div class="order-price-summary-details">
+              <div class="order-price-summary-label" id="order-summary-label">${selectedPackage.label}</div>
+              <div class="order-price-summary-sub">✓ Envío gratis incluido</div>
+            </div>
+            <div class="order-price-summary-total">
+              <div class="order-price-summary-amount" id="order-summary-price">S/ ${selectedPackage.price.toFixed(2)}</div>
+              <div class="order-price-summary-savings" id="order-summary-savings">${selectedPackage.qty > 1 ? 'Ahorras S/ ' + ((selectedPackage.qty * 79) - selectedPackage.price).toFixed(0) : 'Precio unitario'}</div>
             </div>
           </div>
 
-          <form id="purchase-form">
+          <!-- PASO 2: DATOS -->
+          <div class="order-card-step-label" style="margin-top: 28px;"><span>2</span> Tus datos de entrega</div>
+          <form id="purchase-form" style="margin-top: 16px;">
             <div class="form-group">
-              <label class="form-label">Nombre completo</label>
+              <label class="form-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Nombre completo
+              </label>
               <input type="text" class="form-input" id="f-name" placeholder="Ej. María García López" required>
             </div>
+
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">Teléfono</label>
+                <label class="form-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.67a16 16 0 0 0 6 6l.91-1.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 15z"/></svg>
+                  Teléfono WhatsApp
+                </label>
                 <input type="tel" class="form-input" id="f-phone" placeholder="987 654 321" required>
               </div>
               <div class="form-group">
-                <label class="form-label">Talla</label>
+                <label class="form-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 3h6l2 9H5a1 1 0 0 0 0 2h13"/><circle cx="9" cy="19" r="1"/><circle cx="20" cy="19" r="1"/></svg>
+                  Talla
+                </label>
                 <select class="form-input" id="f-size" required>
-                  <option value="">Seleccionar</option>
+                  <option value="">Seleccionar talla</option>
                   <option value="S" disabled>S (26–28) — AGOTADO</option>
-                  <option value="M">M (28–30)</option>
-                  <option value="L">L (30–32)</option>
+                  <option value="M">M (28–30) ✓</option>
+                  <option value="L">L (30–32) ✓</option>
                   <option value="XL" disabled>XL (32–34) — AGOTADO</option>
-                  <option value="XXL">XXL (34+)</option>
+                  <option value="XXL">XXL (34+) ✓</option>
                 </select>
               </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Ciudad / Distrito</label>
-              <input type="text" class="form-input" id="f-city" placeholder="Ej. Miraflores, Lima" required>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Ciudad / Distrito
+                </label>
+                <input type="text" class="form-input" id="f-city" placeholder="Ej. Miraflores, Lima" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Dirección y Referencia
+                </label>
+                <input type="text" class="form-input" id="f-ref" placeholder="Ej. Av. Larco 123, frente al parque" required>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Dirección exacta y Referencia</label>
-              <input type="text" class="form-input" id="f-ref" placeholder="Ej. Av. Larco 123, frente al parque" required>
-            </div>
+
+            <!-- CTA BUTTON -->
             <button type="submit" class="btn-order btn-3d">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.627.616l4.584-1.397A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.663-5.821-1.828l-.407-.275-3.02.92.858-2.951-.3-.423A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-              CONFIRMAR PEDIDO VÍA WHATSAPP
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.627.616l4.584-1.397A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.663-5.821-1.828l-.407-.275-3.02.92.858-2.951-.3-.423A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+              </svg>
+              QUIERO EL MÍO — CONFIRMAR POR WHATSAPP
             </button>
+
+            <!-- MICRO-TRUST -->
+            <div class="order-microtrust">
+              <div class="order-microtrust-item">🔒 Datos protegidos</div>
+              <div class="order-microtrust-item">🛵 Paga al recibir</div>
+              <div class="order-microtrust-item">🚚 Envío gratis</div>
+              <div class="order-microtrust-item">⭐ 512 reseñas</div>
+            </div>
           </form>
-          <div style="display:flex;justify-content:center;gap:6px;margin-top:24px;margin-bottom:6px;flex-wrap:wrap;">
-            <span style="background:rgba(116,36,255,0.1);color:#9b51e0;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(116,36,255,0.25);">💜 Yape</span>
-            <span style="background:rgba(0,188,212,0.1);color:#00bcd4;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(0,188,212,0.25);">🩵 Plin</span>
-            <span style="background:rgba(255,102,0,0.1);color:#ff6600;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(255,102,0,0.25);">🧾 PagoEfectivo</span>
-            <span style="background:rgba(30,215,96,0.1);color:#1ed760;padding:5px 12px;border-radius:24px;font-weight:800;font-size:0.75rem;border:1px solid rgba(30,215,96,0.25);">🛵 Contra Entrega</span>
-          </div>
-          <div style="display:flex;justify-content:center;gap:8px;margin-top:6px;margin-bottom:10px;flex-wrap:wrap;align-items:center;">
-            <svg viewBox="0 0 48 32" width="42" height="28" style="border-radius:4px;background:#fff;padding:2px 4px;"><text x="24" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#1A1F71" font-family="Arial">VISA</text></svg>
-            <svg viewBox="0 0 48 32" width="42" height="28" style="border-radius:4px;background:#fff;padding:2px 4px;"><circle cx="19" cy="16" r="10" fill="#EB001B" opacity="0.8"/><circle cx="29" cy="16" r="10" fill="#F79E1B" opacity="0.8"/></svg>
-            <svg viewBox="0 0 48 32" width="42" height="28" style="border-radius:4px;background:#fff;padding:2px 4px;"><text x="24" y="20" text-anchor="middle" font-size="7" font-weight="700" fill="#016FD0" font-family="Arial">AMEX</text></svg>
-          </div>
+
           <div class="order-security">🔒 Tus datos están protegidos — Paga al recibir en casa</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASARELAS DE PAGO -->
+    <section class="payment-section fade-up-3d">
+      <div class="payment-inner">
+        <div class="section-label">MÉTODOS DE PAGO</div>
+        <h2 class="section-title">Elige cómo pagar</h2>
+        <p class="section-desc" style="margin:0 auto;">Todos los métodos son seguros y no necesitas tarjeta de crédito para comprar.</p>
+        <div class="payment-grid">
+          <div class="payment-method-card">
+            <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="50" rx="8" fill="#7B2D8B"/>
+              <circle cx="40" cy="22" r="14" fill="#fff" opacity="0.15"/>
+              <text x="40" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="Arial">YAPE</text>
+              <text x="40" y="33" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="Arial">BCP</text>
+            </svg>
+            <div class="payment-method-name">Yape</div>
+            <div class="payment-method-desc">BCP — Transferencia al instante</div>
+          </div>
+          <div class="payment-method-card">
+            <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="50" rx="8" fill="#00ADEF"/>
+              <text x="40" y="22" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="Arial">PLIN</text>
+              <text x="40" y="33" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="Arial">BBVA · Interbank · Scotia</text>
+            </svg>
+            <div class="payment-method-name">Plin</div>
+            <div class="payment-method-desc">BBVA · Interbank · Scotia</div>
+          </div>
+          <div class="payment-method-card">
+            <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="50" rx="8" fill="#003F87"/>
+              <text x="40" y="21" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" font-family="Arial">BCP</text>
+              <text x="40" y="33" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="Arial">Transferencia bancaria</text>
+            </svg>
+            <div class="payment-method-name">BCP</div>
+            <div class="payment-method-desc">Transferencia bancaria</div>
+          </div>
+          <div class="payment-method-card">
+            <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="50" rx="8" fill="#009B3A"/>
+              <text x="40" y="21" text-anchor="middle" font-size="8" font-weight="800" fill="#fff" font-family="Arial">INTERBANK</text>
+              <text x="40" y="33" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="Arial">Transferencia bancaria</text>
+            </svg>
+            <div class="payment-method-name">Interbank</div>
+            <div class="payment-method-desc">Transferencia bancaria</div>
+          </div>
+          <div class="payment-method-card">
+            <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="50" rx="8" fill="#fff"/>
+              <text x="40" y="23" text-anchor="middle" font-size="14" font-weight="900" fill="#1A1F71" font-family="Arial">VISA</text>
+              <text x="40" y="36" text-anchor="middle" font-size="6" fill="#666" font-family="Arial">Tarjeta de crédito/débito</text>
+            </svg>
+            <div class="payment-method-name">Visa</div>
+            <div class="payment-method-desc">Crédito o débito</div>
+          </div>
+          <div class="payment-method-card">
+            <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="50" rx="8" fill="#252525"/>
+              <text x="40" y="22" text-anchor="middle" font-size="8" font-weight="800" fill="#ff6b35" font-family="Arial">CONTRA</text>
+              <text x="40" y="33" text-anchor="middle" font-size="8" font-weight="800" fill="#ff6b35" font-family="Arial">ENTREGA</text>
+            </svg>
+            <div class="payment-method-name">Contra Entrega</div>
+            <div class="payment-method-desc">Solo Lima Metropolitana</div>
+          </div>
+        </div>
+        <div class="payment-security-row">
+          <div class="payment-security-badge"><span>🔒</span><span>Pago 100% seguro</span></div>
+          <div class="payment-security-badge"><span>🛡️</span><span>Datos encriptados</span></div>
+          <div class="payment-security-badge"><span>✅</span><span>Sin comisiones extra</span></div>
+          <div class="payment-security-badge"><span>📱</span><span>Confirmación por WhatsApp</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLÍTICAS DE GARANTÍA -->
+    <section class="policies-section fade-up-3d">
+      <div class="policies-inner">
+        <div style="text-align:center;">
+          <div class="section-label">POLÍTICAS Y GARANTÍA</div>
+          <h2 class="section-title">Compra con total tranquilidad</h2>
+          <p class="section-desc" style="max-width:600px;margin:0 auto;">Respaldamos cada pedido con políticas claras y honestas. Sin letra pequeña.</p>
+        </div>
+        <div class="policies-grid">
+          <div class="policy-card tilt-3d">
+            <span class="policy-icon">🛵</span>
+            <div class="policy-title">Pago Contra Entrega</div>
+            <p class="policy-desc">En Lima Metropolitana pagas cuando el motorizado te entrega. Primero recibes, luego pagas. Sin riesgo.</p>
+            <span class="policy-highlight">Solo Lima Metro</span>
+          </div>
+          <div class="policy-card tilt-3d">
+            <span class="policy-icon">🚚</span>
+            <div class="policy-title">Envío Gratis a Todo el Perú</div>
+            <p class="policy-desc">Lima: 1-2 días. Provincias: 3-5 días vía Olva Courier o Shalom. Recibes tu número de guía por WhatsApp.</p>
+            <span class="policy-highlight">Seguimiento incluido</span>
+          </div>
+          <div class="policy-card tilt-3d">
+            <span class="policy-icon">🛡️</span>
+            <div class="policy-title">Garantía de Satisfacción</div>
+            <p class="policy-desc">Si el producto llega con defecto de fábrica, te lo reemplazamos sin costo. Tu satisfacción es nuestra prioridad.</p>
+            <span class="policy-highlight">Garantía total</span>
+          </div>
+          <div class="policy-card tilt-3d">
+            <span class="policy-icon">💬</span>
+            <div class="policy-title">Atención Personalizada</div>
+            <p class="policy-desc">Respuesta por WhatsApp en minutos. Te acompañamos desde el pedido hasta que recibes tu paquete.</p>
+            <span class="policy-highlight">Respuesta inmediata</span>
+          </div>
         </div>
       </div>
     </section>
@@ -526,6 +852,19 @@ function renderApp() {
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-brand">Leggings<span>Perú</span></div>
+
+        <!-- SHARE BUTTON -->
+        <div class="footer-share-wrap">
+          <p class="footer-share-text">¿Conoces a alguien que lo necesita? 👇</p>
+          <button id="share-btn" class="share-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            <span id="share-btn-text">Compartir con una amiga</span>
+          </button>
+        </div>
+
         <p class="footer-text">
           Envíos a todo el país vía Olva Courier, Shalom y servicio motorizado.<br>
           Pagos por Yape, Plin, transferencia BCP/Interbank o contra entrega.<br><br>
@@ -538,7 +877,7 @@ function renderApp() {
     <div class="floating-cta" id="floating-cta">
       <div class="floating-cta-inner">
         <div class="floating-cta-info">
-          <span class="floating-cta-price">S/ 79.00</span>
+          <span class="floating-cta-price">S/ ${selectedPackage.price.toFixed(2)}</span>
           <span class="floating-cta-timer" id="active-buyers-text" style="color:#ef4444; font-weight:700;">👁️ 14 personas comprando</span>
         </div>
         <a href="#ordenar" class="floating-cta-btn">
@@ -568,6 +907,7 @@ function renderApp() {
   setupNotifications()
   setupPackageSelector()
   setupFAQ()
+  setupFloatingCtaVisibility()
   setupActiveBuyers()
 
   // TikTok Pixel — ViewContent
@@ -808,10 +1148,12 @@ function setupPackageSelector() {
       // Update order summary
       const label = document.getElementById('order-summary-label')
       const price = document.getElementById('order-summary-price')
+      const savings = document.getElementById('order-summary-savings')
       const floatingPrice = document.querySelector('.floating-cta-price')
       if (label) label.textContent = `${pkg.label}`
       if (price) price.textContent = `S/ ${pkg.price.toFixed(2)}`
-      if (floatingPrice) floatingPrice.textContent = `S/ 79.00`
+      if (savings) savings.textContent = pkg.qty > 1 ? `Ahorras S/ ${((pkg.qty * 79) - pkg.price).toFixed(0)}` : 'Precio unitario'
+      if (floatingPrice) floatingPrice.textContent = `S/ ${pkg.price.toFixed(2)}`
 
       // TikTok Pixel — AddToCart
       trackTikTok('AddToCart', {
@@ -874,8 +1216,64 @@ function setupFAQ() {
   })
 }
 
+// ═══ SHARE BUTTON ═══
+function setupShareButton() {
+  const btn = document.getElementById('share-btn') as HTMLButtonElement | null;
+  const btnText = document.getElementById('share-btn-text');
+  if (!btn) return;
+
+  const shareData = {
+    title: 'Leggings Térmicos Premium — LeggingsPerú',
+    text: '¡Encontré estos leggings con forro de borreguito que no se transparentan y están a S/ 79! 🔥 Mira esto...',
+    url: window.location.href,
+  };
+
+  btn.addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (e) {
+        // User cancelled — no action needed
+      }
+    } else {
+      // Fallback: copiar URL
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        if (btnText) btnText.textContent = '¡Enlace copiado! ✓';
+        btn.classList.add('share-btn--copied');
+        setTimeout(() => {
+          if (btnText) btnText.textContent = 'Compartir con una amiga';
+          btn.classList.remove('share-btn--copied');
+        }, 2500);
+      } catch {
+        prompt('Copia este enlace:', window.location.href);
+      }
+    }
+  });
+}
+
+// ═══ FLOATING CTA VISIBILITY ═══
+function setupFloatingCtaVisibility() {
+  const floatingCta = document.getElementById('floating-cta')
+  const orderSection = document.getElementById('ordenar')
+  if (!floatingCta || !orderSection) return
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        floatingCta.classList.add('floating-cta-hidden')
+      } else {
+        floatingCta.classList.remove('floating-cta-hidden')
+      }
+    })
+  }, { threshold: 0.15 })
+
+  observer.observe(orderSection)
+}
+
 // ═══ INIT ═══
 document.addEventListener('DOMContentLoaded', () => {
   renderApp();
   setupLazyVideos();
+  setupShareButton();
 });
