@@ -1369,19 +1369,34 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   gap: 2px;
 }
 
-.floating-cta-price {
-  font-family: var(--font-display);
-  font-size: 1.65rem;
-  font-weight: 800;
+.floating-cta-stock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
   color: var(--white);
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  line-height: 1.2;
+}
+
+.floating-cta-stock strong {
+  color: #ff3b3b;
+  font-size: 1.05rem;
+}
+
+.floating-stock-pulse {
+  width: 8px;
+  height: 8px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  animation: livePulse 1.5s ease infinite;
+  flex-shrink: 0;
 }
 
 .floating-cta-timer {
-  font-size: 0.72rem;
-  color: #ff8a65;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
 .floating-cta-btn {
@@ -1627,7 +1642,8 @@ button { cursor: pointer; border: none; font-family: var(--font-body); }
   .section { padding: 36px 14px; }
   .section-title { font-size: clamp(1.2rem, 5vw, 1.5rem); }
   .floating-cta { padding: 8px 10px; }
-  .floating-cta-price { font-size: 1.4rem; }
+  .floating-cta-stock { font-size: 0.75rem; }
+  .floating-cta-stock strong { font-size: 0.95rem; }
   .floating-cta-btn { padding: 11px 18px; font-size: 0.82rem; }
   .topbar { font-size: 0.68rem; padding: 8px 12px; }
   .navbar-inner { height: 52px; }

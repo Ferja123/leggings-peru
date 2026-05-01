@@ -877,8 +877,11 @@ function renderApp() {
     <div class="floating-cta" id="floating-cta">
       <div class="floating-cta-inner">
         <div class="floating-cta-info">
-          <span class="floating-cta-price">S/ ${selectedPackage.price.toFixed(2)}</span>
-          <span class="floating-cta-timer" id="active-buyers-text" style="color:#ef4444; font-weight:700;">👁️ 14 personas comprando</span>
+          <span class="floating-cta-stock" id="floating-stock">
+            <span class="floating-stock-pulse"></span>
+            🔥 Solo quedan <strong>${stock}</strong> unidades
+          </span>
+          <span class="floating-cta-timer" id="active-buyers-text">👁️ 14 personas comprando</span>
         </div>
         <a href="#ordenar" class="floating-cta-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -1068,22 +1071,33 @@ function setupCountdown() {
   setInterval(update, 1000)
 }
 
-// ═══ ACTIVE BUYERS ═══
+// ═══ ACTIVE BUYERS + FLOATING STOCK ═══
 function setupActiveBuyers() {
   const buyersEl = document.getElementById('active-buyers-text')
+  const floatingStockEl = document.getElementById('floating-stock')
   if (!buyersEl) return
   
   let currentBuyers = 12 + Math.floor(Math.random() * 8)
+  let floatingStock = getStockCount()
   
+  // Buyers counter
   setInterval(() => {
-    // Randomly fluctuate between 10 and 28
     const change = Math.floor(Math.random() * 5) - 2
     currentBuyers += change
     if (currentBuyers < 10) currentBuyers = 10
     if (currentBuyers > 28) currentBuyers = 28
-    
     buyersEl.innerHTML = `👁️ ${currentBuyers} personas comprando`
   }, 4500)
+
+  // Floating stock countdown — decreases slowly
+  if (floatingStockEl) {
+    setInterval(() => {
+      if (Math.random() > 0.6 && floatingStock > 3) {
+        floatingStock--
+        floatingStockEl.innerHTML = `<span class="floating-stock-pulse"></span> 🔥 Solo quedan <strong>${floatingStock}</strong> unidades`
+      }
+    }, 8000)
+  }
 }
 
 // ═══ PURCHASE NOTIFICATIONS ═══
@@ -1149,11 +1163,9 @@ function setupPackageSelector() {
       const label = document.getElementById('order-summary-label')
       const price = document.getElementById('order-summary-price')
       const savings = document.getElementById('order-summary-savings')
-      const floatingPrice = document.querySelector('.floating-cta-price')
       if (label) label.textContent = `${pkg.label}`
       if (price) price.textContent = `S/ ${pkg.price.toFixed(2)}`
       if (savings) savings.textContent = pkg.qty > 1 ? `Ahorras S/ ${((pkg.qty * 79) - pkg.price).toFixed(0)}` : 'Precio unitario'
-      if (floatingPrice) floatingPrice.textContent = `S/ ${pkg.price.toFixed(2)}`
 
       // TikTok Pixel — AddToCart
       trackTikTok('AddToCart', {
