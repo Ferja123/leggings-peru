@@ -607,15 +607,6 @@ function renderApp() {
           </div>
         `).join('')}
       </div>
-      <div class="faq-cta-banner">
-        <div class="faq-cta-text">
-          <h4>¿Tu pregunta no está aquí?</h4>
-          <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
-        </div>
-        <a href="https://wa.me/51919749480?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20leggings%20t%C3%A9rmicos" target="_blank" class="faq-cta-btn">
-          💬 Escribir por WhatsApp
-        </a>
-      </div>
     </section>
 
     <!-- ORDER FORM -->
